@@ -29,5 +29,4 @@ if 'The e-mail has been sent' in email_req.text:
     print("[+] EMAIL HAS BEEN SENT")
     print("[+] this anonymous email will have a 12 hour delay for more privacy")
 
-If 'email has not been sent' in email_req.text:
- print("[+]email failed to send try again")
+
