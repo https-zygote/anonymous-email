@@ -1,8 +1,16 @@
 # coded by http.zygote my first project
 import requests
-
-print("\nAnonymous Email by anonymouse.org")
-print("coded by http.zygote")
+def prRed(skk): print("\033[91m {}\033[00m" .format(skk)) 
+def prGreen(skk): print("\033[92m {}\033[00m" .format(skk)) 
+def prYellow(skk): print("\033[93m {}\033[00m" .format(skk)) 
+def prLightPurple(skk): print("\033[94m {}\033[00m" .format(skk)) 
+def prPurple(skk): print("\033[95m {}\033[00m" .format(skk)) 
+def prCyan(skk): print("\033[96m {}\033[00m" .format(skk)) 
+def prLightGray(skk): print("\033[97m {}\033[00m" .format(skk)) 
+def prBlack(skk): print("\033[98m {}\033[00m" .format(skk)) 
+  
+prRed("\nAnonymous Email by anonymouse.org")
+prCyan("coded by http.zygote")
 to = raw_input('to: ')
 subject = raw_input('insert subject: ')
 message = raw_input('insert message: ')
@@ -26,7 +34,7 @@ email_req = sess.post('http://anonymouse.org/cgi-bin/anon-email.cgi', headers={
 })
 
 if 'The e-mail has been sent' in email_req.text:
-    print("[+] EMAIL HAS BEEN SENT")
-    print("[+] this anonymous email will have a 12 hour delay for more privacy")
+    prRed("[+] EMAIL HAS BEEN SENT")
+    prCyan("[+] this anonymous email will have a 12 hour delay for more privacy")
 
 
